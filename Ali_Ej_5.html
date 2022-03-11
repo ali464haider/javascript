@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Corredores</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+    <h1>Formulario Para Corredores</h1>
+    <form action="">
+        <label for="nombre">Tu nombre: </label>
+        <input type="name" name="nombre" id="nombre" onblur="valid()"><br><br>
+        <label for="correo">Tu email: </label>
+        <input type="email" name="correo" id="correo" onblur="validarcorreo()"><br><br>
+        <label for="">¿Has corrido antes? </label><br><br>
+        <label for="si">Si </label>
+        <input type="radio" name="rad" id="si" value="si" onclick="crear()">
+        <label for="no">No </label>
+        <input type="radio" name="rad" id="no" value="no" onclick="crear()"><br><br>
+        <div id="padre"></div>
+        <button onclick="mostrar()">Mostrar Infromacion</button>
+    </form>
+ 
+    <script src="js/Ali_Ej_5.js"></script>
+</body>
+</html>
