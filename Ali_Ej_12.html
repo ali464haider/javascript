@@ -1,0 +1,57 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<script>
+		
+		function cambiarFoto(){
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    var nombre=this.responseText;
+    var lista=nombre.split(",");
+    var select=document.getElementsByTagName("select")[0];
+    for(i=0;i<lista.length;i++){
+      var opcion = document.createElement("option");
+      select.appendChild(opcion);
+      opcion.value=(lista[i]);
+      opcion.innerHTML=i+1;
+      
+    }
+    select.onchange = function(){
+    	if(document.getElementsByTagName("img")[0]!=null){
+    		document.getElementsByTagName("img")[0].remove();
+    	}
+    	var div = document.getElementById("demo");
+    	
+    	for(i=0;i<lista.length;i++){
+    		if(select.value==lista[i]){
+    		var imagen = document.createElement("img");
+    		div.appendChild(imagen);
+    		imagen.src=lista[i];
+    		}
+    	}
+    }
+    }
+
+  xhttp.open("GET", "imagenes.txt", true);
+  xhttp.send();
+}
+	</script>	
+<style>
+	img{
+		width: 500px
+	}
+	select{
+		position: absolute;
+		top: 100px;
+
+	}
+</style>		
+</head>
+<body  onload="cambiarFoto();">
+<div id="demo">	
+<h2>Selecciona imagenes que quieres ver</h2>
+	<select>
+	</select>	
+</div>	
+</body>
+</html>
