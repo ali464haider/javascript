@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        function pedirnombres(){
+            var nombre=prompt("Escribe un nombre. Para terminar escribe el texto fin.");
+            texto=[];
+
+            while(nombre!="fin"){
+                texto.push(nombre);
+                nombre=prompt("Escribe un nombre. Para terminar escribe el texto fin.");
+            }
+
+            texto.forEach(nombre=>console.log(nombre));
+            console.log("\n");
+            console.log("Ordern Inverso");
+
+            for(i=texto.length-1;i>=0;i--){
+                console.log(texto[i]);
+            }
+        }
+
+        pedirnombres();
+
+
+
+    </script>
+</body>
+</html>
