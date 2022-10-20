@@ -42,6 +42,11 @@ function cancelar() {
     location.href = "aterrizaje.html";
 }
 
+function habilitarPopup(){
+    var proyectoForm=document.getElementById('proyectoForm');
+    proyectoForm.classList.add('active');
+}
+
 function crearProyecto(){
     var divCentral=document.getElementById('central');
     if(!document.getElementById('proyectoForm')){
@@ -97,8 +102,6 @@ function agregarProyecto(){
     var input=document.getElementById('texto1');
     var input1=document.getElementById('texto2');
     listaProyectos.push(new Proyecto(input.value,input1.value));
-
-    alert("Proyecto Agregado.");
     mostrarProyectos(listaProyectos);
 }
 

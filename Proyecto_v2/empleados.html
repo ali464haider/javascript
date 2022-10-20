@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <title>Gestiona IES</title>
     <link rel="stylesheet" href="aterrizaje.css">
-    <script src="proyecto.js"></script>
-    <script src="proyectos.js"></script>
+    <script src="empleado.js"></script>
+    <script src="empleados.js"></script>
     
 </head>
 
@@ -59,13 +59,16 @@
         <div id="acciones">
             <input type="text" name="buscar" id="buscar">
             <button type="button" onclick="filtrar()">Filtrar</button>
-            <button type="button" onclick="crearProyecto(); habilitarPopup();">Nuevo</button>
+            <button type="button" onclick="nuevoEmpleado(); habilitarPopup();">Nuevo</button>
+            <button type="button" onclick="eliminarEmpleado()">Eliminar</button>
             <button type="button" onclick="ordenar()">Ordenar</button>
             <button type="button" onclick="imprimir()">Imprimir</button>
             <button type="button" onclick="cancelar()">Cancelar</button>
             <br>
             
         </div>
+
+        
         
         <footer><a target="blank" href="https://www.educa2.madrid.org/web/iescanaveral">IES EL CAÑAVERAL</a></footer>
     </div>

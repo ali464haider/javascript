@@ -1,6 +1,6 @@
 class Empleado{
-    constructor(name,apellido,id,salario,nrodep){
-        this.name=name || "sin nombre";
+    constructor(nombre,apellido,id,salario,nrodep){
+        this.nombre=nombre || "sin nombre";
         this.apellido=apellido || "sin apellido";
         this.id=id || "sin id";
         this.salario =salario || "sin salario";
