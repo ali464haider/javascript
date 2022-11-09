@@ -1,0 +1,1 @@
+var carrito = document.getElementsByClassName('carrito')[0];
