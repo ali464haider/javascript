@@ -25,6 +25,7 @@ body {
     top: 0%;
     width: 100%;
     color: white;
+    z-index: 11;
 }
 
 .navbar .logo {
@@ -181,11 +182,11 @@ body {
 
 
 .home-content .categorias img {
-    width: 80%;
+    width: 90%;
     height: auto;
     margin-top: 10px;
-    margin-left: -10%;
     transition: all .2s ease-in-out;
+    object-fit: contain;
 }
 
 .categoria-item:hover {
@@ -241,6 +242,20 @@ body {
     background: transparent;
     color: white;
     cursor: pointer;
+}
+#tablaObjetoMoviles tr td:last-child:hover{
+    background-color: blue;
+}
+
+#carrito #carrito-box{
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    right: 0%;
+    top: 0%;
+    background-color: #d4d7dd;
+    z-index: 10;
+    padding-top: 10%;
 }
 
 

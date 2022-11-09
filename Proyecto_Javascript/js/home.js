@@ -1,8 +1,8 @@
 listaCategorias = [
-    ["Moviles", "https://guide-images.cdn.ifixit.com/igi/H4M1JEQiZabe4Vo2.standard","moviles.html"],
-    ["Tablets", "https://guide-images.cdn.ifixit.com/igi/RacpAWWRuobmX5g4.standard","tablets.html"],
-    ["Pc Portatil", "https://guide-images.cdn.ifixit.com/igi/IlacTC2EdoTKtKdC.standard","portatil.html"],
-    ["Pc Ordenador", "https://guide-images.cdn.ifixit.com/igi/P1WJqUOlaXZYNVSD.standard","sobremesa.html"]
+    ["IPHONE","iphone.html","images/iphone.jpg"],
+    ["SAMSUNG","samsung.html","images/samsung.jfif"],
+    ["HUAWEI","huawei.html","images/huawei.jfif"],
+    ["XIAOMI","xiaomi.html","images/xiaomi.jfif"]
 ];
 
 window.onload = () => {
@@ -15,7 +15,7 @@ function cargarCategorias(lista) {
     categoria.innerHTML="";
     lista.forEach(elemento => {
             var a = document.createElement('a');
-            a.setAttribute("href",elemento[2]);
+            a.setAttribute("href",elemento[1]);
             a.classList.add("categoria-item");
 
             var div=document.createElement('div');
@@ -28,7 +28,7 @@ function cargarCategorias(lista) {
             a.appendChild(p);
 
             var img=document.createElement('img')
-            img.setAttribute("src",elemento[1]);
+            img.setAttribute("src",elemento[2]);
             a.appendChild(img);
 
             categoria.appendChild(a);
